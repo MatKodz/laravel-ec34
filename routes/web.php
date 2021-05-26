@@ -17,10 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/agences', function() {
+
+    return "testalright";
+});
+
 
 Route::get('/agences/{slug}', function($slug) {
 
     return view("agence", [
-        'agence' => Agence::findAgency($slug) 
+        'agence' => Agence::findAgency($slug)
     ]);
 });
